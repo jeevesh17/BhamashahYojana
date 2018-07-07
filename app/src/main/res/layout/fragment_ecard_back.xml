@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:id="@+id/ss"
+        android:background="@color/colorCardGreen"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/chief_officer"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/sign"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_above="@id/coo"
+            android:src="@drawable/sign" />
+
+        <ImageView
+            android:id="@+id/mid"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_above="@id/sign"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bhamashah_bg_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/mid"
+            android:background="@color/colorCardOrange">
+
+            <com.paprbit.bhamashah.widget.VerticalTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="bottom"
+                android:padding="4dp"
+                android:text="@string/family_details"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_members"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#000" />
+
+                <com.paprbit.bhamashah.widget.MemberLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/coo"
+            android:layout_toRightOf="@id/sign"
+            android:paddingBottom="4dp"
+            android:paddingLeft="20dp"
+            android:textSize="14sp"
+            android:text="date" />
+
+
+        <TextView
+            android:id="@+id/jaipur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_toRightOf="@id/coo"
+            android:paddingLeft="12dp"
+            android:text="@string/jaipur"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/barcode" />
+    </RelativeLayout>
+</LinearLayout>
